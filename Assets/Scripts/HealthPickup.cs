@@ -18,6 +18,8 @@ public class HealthPickup : MonoBehaviour {
 			// then damage it
 			thingCurrentlyInside.GetComponent<Hurtable>().health += 10f;
 			Destroy (gameObject);
+			//transform.Translate(0, -60, 0);
+
 		}
 		
 	}

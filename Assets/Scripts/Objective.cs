@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-
 public class Objective : MonoBehaviour {
+
+	 public bool start = false;
 	 public float count = 0f;
 	// Use this for initialization
 	void Start () {
@@ -23,11 +24,9 @@ public class Objective : MonoBehaviour {
 		}
 		if (count == 2f){
 			textBuffer += "- You can move your space rover with the WASD keys.\n";
-			textBuffer += "- You can also use your rover's boosters to jump by pressing [SPACE].\n";
 			textBuffer += "- Press [F] to continue...";
 		}
 		if (count == 3f){
-			textBuffer += "- Be careful though, the boosters take oxygen from the same tank that your suit does.\n";
 			textBuffer += "- If you run out of oxygen, you're dead. FOR REAL.\n";
 			textBuffer += "- Press [F] to continue...";
 		}
@@ -36,8 +35,9 @@ public class Objective : MonoBehaviour {
 			textBuffer += "- So find your keys and get back inside your ship where there's a ton of sweet, sweet oxygen!\n";
 			textBuffer += "- Press [F] if you understand.";
 		}
-		if (count ==5f){
+		if (count >=5f ){
 			textBuffer += "- Find Your Keys.";
+			start = true;
 		}
 		if (Input.GetKeyDown(KeyCode.F)){
 			count+=1f;

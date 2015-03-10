@@ -38,7 +38,12 @@ public class Hint : MonoBehaviour {
 			rescue = true;
 
 			
-		
+		if (GameObject.Find("Player").GetComponent<Hurtable>().health < 0f){
+			textBuffer = "";
+		}
+		if (GameObject.Find("Keys").GetComponent<KeyPickUp>().item == true){
+			textBuffer = "You got the key! Head back to your ship!";
+		}
 		}else{
 			textBuffer +="";
 		}

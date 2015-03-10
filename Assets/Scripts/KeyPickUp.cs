@@ -17,6 +17,8 @@ public class KeyPickUp : MonoBehaviour {
 		if (thingCurrentlyInside != null){
 			// then damage it
 			item = true;
+			// TEST THIS TO MAKE SURE IT WORKS
+			renderer.enabled = false;
 		}
 		
 	}

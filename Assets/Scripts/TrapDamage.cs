@@ -15,7 +15,7 @@ public class TrapDamage : MonoBehaviour {
 		// if there is a thing currently inside this trigger...
 		if (thingCurrentlyInside != null){
 			// then damage it
-			thingCurrentlyInside.GetComponent<Hurtable>().health -= 100f;
+			thingCurrentlyInside.GetComponent<Hurtable>().health -= 300f;
 		}
 	
 	}
