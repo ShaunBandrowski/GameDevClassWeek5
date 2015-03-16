@@ -16,7 +16,7 @@ public class Hurtable : MonoBehaviour {
 	void Update () {
 
 		if (GameObject.Find("TextTwo").GetComponent<Objective>().start == true){
-		health -= .1f*Time.deltaTime; 
+		health -= 1f*Time.deltaTime; 
 
 		if ( health <= 0f ){
 			//Destroy ( gameObject );

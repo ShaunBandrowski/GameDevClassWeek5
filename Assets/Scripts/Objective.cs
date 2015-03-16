@@ -23,7 +23,7 @@ public class Objective : MonoBehaviour {
 			textBuffer += "- Press [F] to get started.";
 		}
 		if (count == 2f){
-			textBuffer += "- You can move your space rover with the WASD keys.\n";
+			textBuffer += "- You can move your space rover with the WASD or Arrow keys.\n";
 			textBuffer += "- Press [F] to continue...";
 		}
 		if (count == 3f){

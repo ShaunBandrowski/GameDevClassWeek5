@@ -23,13 +23,21 @@ public class Hint : MonoBehaviour {
 			textBuffer += "";
 		}
 
+		if (dist < 1550 && rescue == false){
+			
+			textBuffer = "Hint: You might want to keep looking around. You're super far from the keys.";
+		}
 		if (dist < 1000 && rescue == false){
 			
-			textBuffer = "Hint: You remember being north of your ship earlier in the day. Near the flowing lava river.";
+			textBuffer = "Hint: You're getting closer, but the keys still elude you.";
 		}
-		if (dist < 600 && rescue == false){
-
-			textBuffer = "Hint: Those oxygen tanks seem like breadcrumbs leading to where you were earlier today.";
+		if (dist < 700 && rescue == false){
+			
+			textBuffer = "Hint: The keys must be close to here.";
+		}
+		if (dist < 300 && rescue == false){
+			
+			textBuffer = "Hint: You're very close to the keys.";
 		}
 		if(dist<100 ){
 			
@@ -42,7 +50,7 @@ public class Hint : MonoBehaviour {
 			textBuffer = "";
 		}
 		if (GameObject.Find("Keys").GetComponent<KeyPickUp>().item == true){
-			textBuffer = "You got the key! Head back to your ship!";
+			textBuffer = "";
 		}
 		}else{
 			textBuffer +="";
